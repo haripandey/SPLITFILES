@@ -59,11 +59,12 @@ sleep(1);
 //////////////////////////////////////////////////////////////////////
     std::cout<<BOLDCYAN <<"    Please"<<RESET<<endl;sleep(1);std::cout<<BOLDRED<<"  	   enter the file name"<<RESET<<endl;sleep(1);std::cout<<BOLDYELLOW<<"                        that you want to split"<<RESET<<endl;sleep(1);std::cout<<BOLDCYAN<<"                                   with its full path"<<RESET<<endl;
 /////////////////////////////////////////////////////////////////////////
+    std::string name;
+    std::cin >> name;
+
     std::cout<<BOLDCYAN <<"************************************************************"<<RESET;std::cout<<BOLDRED<<"*****************************************"<<RESET;sleep(1);std::cout<<BOLDYELLOW<<"*********************************"<<RESET;std::cout<<BOLDWHITE<<"***************************************"<<RESET<<endl;
 
 ///////////////////////////////////////////////////////////////////////    
-    std::string name;
-    std::cin >> name;
     std::ifstream infile(name.c_str());
     std::cout<<'\n';
     cin.clear();
@@ -79,16 +80,17 @@ sleep(1);
     infile.seekg(0,std::ios::end);
     size = infile.tellg();
     infile.seekg (0, std::ios::beg);
-    std::cout <<BOLDWHITE<< "The file has " << size << " letters. " <<RESET<< std::endl;
+    std::cout <<BOLDWHITE<< "          This file has " << size << " letters. " <<RESET<< std::endl;
+    cout<<'\n';
 ///////////////////////////////////////////////////////////////////////////
     buffer = new char [size]; 
     infile.read(buffer,size);
     buffer[infile.gcount()] = 0;            
 //////////////////////////////////////////////////////////////////////////
     if (infile){
-        std::cout <<BOLDYELLOW<< "All characters in your input file has been read out "<<RESET<<std::endl;
+        std::cout <<BOLDYELLOW<< "	All characters in your input file has been read out "<<RESET<<std::endl;
         std::cout<<'\n'<<endl;
-        std::cout<<BOLDRED<<"Your project is successiful. Please find your splitted files in: ~/Desktop/PARTS "<<RESET<<std::endl;
+        std::cout<<BOLDCYAN <<"************************************************************"<<RESET;std::cout<<BOLDRED<<"*****************************************"<<RESET;sleep(1);std::cout<<BOLDYELLOW<<"*********************************"<<RESET;std::cout<<BOLDWHITE<<"***************************************"<<RESET<<endl;
         std::cout<<std::endl;  
 	   }else{ 
                std::cout << BOLDRED <<"warning: only " << infile.gcount() << " were be read"<<RESET<<std::endl;
@@ -106,5 +108,7 @@ sleep(1);
        }
 ///////////////////////////////////////////////////////////////////////////////
       delete[] buffer;
+        std::cout<<BOLDYELLOW<<"     Congratulations ! Your file splitting is successiful. Please find your splitted files in: ~/Desktop/PARTS "<<RESET<<std::endl;
+
 return 0;
 }
