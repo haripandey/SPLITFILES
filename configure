@@ -1,0 +1,10 @@
+#!/bin/bash
+rm -rf ~/splitting
+rm -rf ./splitting
+mkdir splitting
+mkdir splitting/bin
+cp ./splt.cpp splitting
+cp ./splitfile splitting/bin
+cp -r  ./splitting ~/splitting
+cat paarth>>~/.bashrc
+source ~/.bashrc
