@@ -1,0 +1,7 @@
+#!/bin/bash
+rm -rf ~/Desktop/PARTS
+g++ ~/splitting/splt.cpp -o out.out
+./out.out
+rm ./out.out
+mkdir ~/Desktop/PARTS
+mv *.txt ~/Desktop/PARTS
