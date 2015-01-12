@@ -1,4 +1,4 @@
-IF YOUR FILE IS VERY LARGE, USE "splt_new.cpp"  insted of splt.cpp.
+IF YOUR FILE IS MODERATELY LARGE, YOU ALSO CAN USE "splt_new.cpp"  insted of splt.cpp.It also prints some additional informations in screen. But this splt_new.cpp and splt.cpp are similar.
 In splt_new.cpp we need to calculate the value of input.
 It will aks you  PLEASE ENTER THE NAME OF INPUT FILE: your answer is  for example "test.doc". It will provide you the 
  size of your input file(in bytes) eg: "SIZE_OF_INPUT_FILE = 361".  Decide how many file or what size of file you want to make. the use formula
